@@ -1,0 +1,8 @@
+# Ignore all a.out files
+a.out
+
+# Ignore all .swp files (swap files)
+*.swp
+
+# Ignore all .nfs files
+*.nfs
