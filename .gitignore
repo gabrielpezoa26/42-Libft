@@ -6,3 +6,6 @@ a.out
 
 # Ignore all .nfs files
 *.nfs
+
+#vscode
+.vscode/
