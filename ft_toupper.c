@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:48:08 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/14 16:33:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/14 19:01:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_tolower(char *str)
+char	*ft_toupper(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
 		i++;
 	}
 	return (str);
@@ -28,7 +28,7 @@ char	*ft_tolower(char *str)
 
 int	main()
 {
-	char	str[] = "KSFJKDDKD";
-	printf("%s", ft_tolower(str));
+	char	str[] = "aaaaaaaaa";
+	printf("%s", ft_toupper(str));
 	return (0);
 }
