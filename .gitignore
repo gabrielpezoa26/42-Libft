@@ -1,11 +1,11 @@
-# Ignore all a.out files
-a.out
+# Ignore everything
+*
 
-# Ignore all .swp files (swap files)
-*.swp
+# Don't ignore these file types
+!*.c
+!*.h
+!Makefile
 
-# Ignore all .nfs files
-*.nfs
-
-#vscode
+# Ignore the .vscode directory
 .vscode/
+
