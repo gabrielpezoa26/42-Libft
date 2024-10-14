@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:48:08 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/14 19:01:52 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/14 19:14:53 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ char	*ft_toupper(char *str)
 	}
 	return (str);
 }
-
+/*
 int	main()
 {
 	char	str[] = "aaaaaaaaa";
 	printf("%s", ft_toupper(str));
 	return (0);
-}
+}*/
