@@ -3,32 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:48:08 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/14 19:14:53 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/15 11:16:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_toupper(char *str)
+char	ft_toupper(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-		i++;
-	}
-	return (str);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
-/*
-int	main()
-{
-	char	str[] = "aaaaaaaaa";
-	printf("%s", ft_toupper(str));
-	return (0);
-}*/
+
+// int	main()
+// {
+// 	//char	potato = 'H';
+// 	printf("%c", ft_toupper('a'));
+// 	return (0);
+// }
