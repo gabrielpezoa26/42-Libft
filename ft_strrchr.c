@@ -6,14 +6,14 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 17:54:32 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/15 18:15:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	count;
 
@@ -30,10 +30,10 @@ char	*ft_strrchr(const char *str, int search_str)
 	int	i;
 	int	size;
 
-	ft_strlen(search_str);
+	size = ft_strlen(str);
 
 	i = 0;	
-	while (str[i] != '\0')
+	while (str[i] != size - 1)
 	{
 		if ((str[i] == search_str) || (str[i] == search_str))
 			return ((char *)&str[i]);
@@ -44,9 +44,9 @@ char	*ft_strrchr(const char *str, int search_str)
 
 int	main()
 {
+	char	potato[] = "ddddgabcdef";
 	int		letter = 'a';
-	char	*potato = "ddddgabcdef";
 
-	printf("dasdsadsa: %s", ft_strrchr(potato, letter));
-//	printf("\nfunc original: %s ", strrchr(potato, letter));
+	printf("batata: %s", ft_strrchr(potato, letter));
+	printf("\nfunc original: %s ", strrchr(potato, letter));
 }
