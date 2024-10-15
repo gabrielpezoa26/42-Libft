@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:57:06 by gabriel           #+#    #+#             */
-/*   Updated: 2024/10/15 13:29:42 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/15 13:40:49 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/10/15 14:50:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlcat(char *dest, char *src, size_t size)
+char	*ft_strnstr(char *dest, char *src, size_t n)
 {
-	int		i;
-	int		j;
+	int	i;
+	int	j;
 
 	i = 0;
-	while (dest[i] != '\0')
+	while ((dest[i] != '\0') && (i < n))
 	{
+		j = 0;
+		while ((dest[i] == src[j]) || (src[j] == '\0'))
+		{
+			if (src[j] == '\0')
+			{
+				return (&dest[i - j]);
+			}
+			j++;
+			i++;
+		}
 		i++;
 	}
-	j = 0;
-	while (src[j] != '\0' && j < size)
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	return (i + j);
+	return (NULL);
 }
 
-// int	main()
+// int    main()
 // {
-// 	char	potato[] = "aaaaa";
-// 	char	beans[] = "aaaaac";
-// 	printf("%d", ft_strlcat(potato, beans, 3));
-// 	return (0);
+//     char    potato[] = "fone";
+//     char    habibs[] = "aaaaaaaafoneaaaa";
+//     printf("%s", ft_strnstr(habibs, potato, 15));
 // }

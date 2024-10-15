@@ -1,0 +1,1 @@
+char	*ft_strchr(const char *str, int search_str)
