@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:39:21 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/14 16:14:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:43:04 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ int	ft_strlen(char *str)
 // 	char potato[] = "aaaaaaaaaaa";
 // 	printf("%d", ft_strlen(potato));
 // }
+

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 17:18:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:25:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ char	*ft_strchr(const char *str, int search_str)
 	return (NULL);
 }
 
-int	main()
-{
-	int		letter = '\0';
-	char	*potato = "ddddgabcdef";
+// int	main()
+// {
+// 	int		letter = '\0';
+// 	char	*potato = "ddddgabcdef";
 
-	printf("dasdsadsa: %s", ft_strchr(potato, letter));
-	printf("\nfunc original: %s ", strchr(potato, letter));
-}
+// 	printf("dasdsadsa: %s", ft_strchr(potato, letter));
+// 	printf("\nfunc original: %s ", strchr(potato, letter));
+// }

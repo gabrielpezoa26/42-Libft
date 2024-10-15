@@ -6,21 +6,36 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 17:12:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:54:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
+int	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_strrchr(const char *str, int search_str)
 {
 	int	i;
-/// fazer um strlen e dps i - 1
-	i = 0;
+	int	size;
+
+	ft_strlen(search_str);
+
+	i = 0;	
 	while (str[i] != '\0')
 	{
-		if (str[i] == search_str)
+		if ((str[i] == search_str) || (str[i] == search_str))
 			return ((char *)&str[i]);
 		i--;
 	}
@@ -29,9 +44,9 @@ char	*ft_strrchr(const char *str, int search_str)
 
 int	main()
 {
-	int		letter = '\0';
+	int		letter = 'a';
 	char	*potato = "ddddgabcdef";
 
 	printf("dasdsadsa: %s", ft_strrchr(potato, letter));
-	printf("\nfunc original: %s ", strchr(potato, letter));
+//	printf("\nfunc original: %s ", strrchr(potato, letter));
 }
