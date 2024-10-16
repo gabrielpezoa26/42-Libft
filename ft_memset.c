@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:35:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/16 13:25:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/16 14:50:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	*ft_memset(void	*ptr, int value, size_t num)
 	return (ptr);
 }
 
-// int	main()
-// {
-// 	char	potato[] = "fsfsf dfssdsfg";
-// 	ft_memset(potato, '\0', 5);
-// 	printf("%s", potato);
-// }
+int	main()
+{
+	char	potato[] = "fsfsf dfssdsfg";
+	ft_memset(potato, '\0', 5);
+	printf("%s", potato);
+}
