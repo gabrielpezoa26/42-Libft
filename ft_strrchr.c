@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 18:15:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:11:05 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char	*ft_strrchr(const char *str, int search_str)
 
 	size = ft_strlen(str);
 
-	i = 0;	
+	i = ft_strlen(str);	
 	while (str[i] != size - 1)
 	{
-		if ((str[i] == search_str) || (str[i] == search_str))
+		if (str[i] == search_str)
 			return ((char *)&str[i]);
 		i--;
 	}
@@ -45,7 +45,7 @@ char	*ft_strrchr(const char *str, int search_str)
 int	main()
 {
 	char	potato[] = "ddddgabcdef";
-	int		letter = 'a';
+	int		letter = '\0';
 
 	printf("batata: %s", ft_strrchr(potato, letter));
 	printf("\nfunc original: %s ", strrchr(potato, letter));
