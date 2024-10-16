@@ -19,11 +19,11 @@ char	*ft_strlcpy(char *dest, char *src, int	n)
 int	main()
 {
 	char	potato[] = "batata";
-	char 	caneta[50] = "";
+	char 	caneta[] = "";
 
-	ft_strlcpy(caneta, potato, 6);
+	ft_strlcpy(caneta, potato, 3);
 	printf("%s  \n", caneta);
-	printf("Length of caneta: %zu\n", strlen(caneta));  // teste
+	//printf("Length of caneta: %zu\n", strlen(caneta));  // teste
 
 	return (0);
 }
