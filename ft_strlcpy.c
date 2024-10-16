@@ -12,6 +12,7 @@ char	*ft_strlcpy(char *dest, char *src, int	n)
 		i++;
 	}
 	dest[n - 1] = '\0';
+	//dest[n + 1] = '\0';
 	return (dest);
 }
 
