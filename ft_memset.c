@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:35:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/16 13:20:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:25:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 void	*ft_memset(void	*ptr, int value, size_t num)
 {
 	unsigned int	i;
-	unsigned char	*phone;
+	unsigned char	*x;
 
 	i = 0;
-	phone = (unsigned char *)ptr;
+	x = (unsigned char *)ptr;
 	while (i < num)
 	{
-		phone[i] = value;
+		x[i] = value;
 		i++;
 	}
 	return (ptr);
