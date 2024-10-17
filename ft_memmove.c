@@ -27,10 +27,15 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	size_dest = ft_strlen(dest);
 	size_src = ft_strlen(src);
 	i = 0;
-	while (i < num)
+	if (size_dest > size_src)
+		return (1);
+	else if (size_src < size_dest)
 	{
-		d[i] = k[i];
-		i++;
+		while (i < num)
+		{
+			d[i] = k[i];
+			i++;
+		}
 	}
 	return (dest);
 }
@@ -38,10 +43,10 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 int	main()
 {
 	char	potato[4] = "aaaa";
-	char	caneta[3] = "kk";
+	char	caneta[3] = "kkkk";
 
-	//ft_memmove(caneta, potato, 4);
-	//printf("func 42: %s   \n", caneta);
+	ft_memmove(caneta, potato, 4);
+	printf("func 42: %s   \n", caneta);
 
 	memmove(caneta, potato, 4);
 	printf("func. original %s\n", caneta);

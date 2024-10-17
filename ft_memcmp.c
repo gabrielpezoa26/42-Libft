@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 14:41:26 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 10:34:09 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/17 10:43:47 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/10/17 12:02:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*y;
 	unsigned char	*u;
 
+	y = (unsigned char *)str1;
+	u = (unsigned char *)str2;
 	i = 0;
-	y = (unsigned char *)dest;
-	u = (unsigned char *)src;
-
-	while (i < n)
+	while (y[i] != '\0' && u[i] != '\0' && i < n)
 	{
-		y[i] = u[i];
+		if (y[i] < u[i])
+			return (-1);
+		else if (y[i] > u[i])
+			return (1);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
 
-/*int	main()
+int	main()
 {
-	char	apple[] = "aaaaaaaa";
-	char	potato[] = "fsfsf dfssdsfg";
-
-	ft_memcpy(apple, potato, 5);
-	memcpy(apple, potato, 5);
-	printf("pacoca:  %s \n", apple);
-}*/
+	char	potato[] = "";
+	char	beans[] = "";
+	printf("func 42: %d  \n", ft_memcmp(potato, beans, 4));
+	printf("func original: %d  \n", memcmp(potato, beans, 4));
+	return (0);
+}
