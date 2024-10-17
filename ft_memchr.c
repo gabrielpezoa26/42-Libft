@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 14:40:15 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/17 12:03:44 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/10/17 14:41:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-char	*ft_strchr(const char *str, int search_str)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	int	i;
+	unsigned char	*y;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0') 
+	y = (unsigned char *)str;
+	while (i < n)
 	{
-		if (str[i] == search_str)
+		if (y[i] == c)
+			//return (y);
 			return ((char *)&str[i]);
 		i++;
 	}
-	if (search_str == '\0')
-		return ((char *)&str[i]);
-
 	return (NULL);
 }
 
 int	main()
 {
-	int		letter = '\0';
-	char	*potato = "ddddgabcdef";
+	char potato[] = "aaahaaaa";
 
-	printf("resultado: %s", ft_strchr(potato, letter));
-	printf("\nfunc original: %s \n", strchr(potato, letter));
-	return (0);
+    char *found = memchr(potato, 'h', 10);
+    printf("func original: %s\n", found);
+//////////////////////////////////////////////////////////
+    char *found_42 = ft_memchr(potato, 'h', 10);
+    printf("func 42: %s\n", found_42);
 }

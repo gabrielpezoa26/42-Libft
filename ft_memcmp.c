@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:43:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 12:02:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:04:09 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-int	main()
-{
-	char	potato[] = "";
-	char	beans[] = "";
-	printf("func 42: %d  \n", ft_memcmp(potato, beans, 4));
-	printf("func original: %d  \n", memcmp(potato, beans, 4));
-	return (0);
-}
+// int	main()
+// {
+// 	char	potato[] = "";
+// 	char	beans[] = "";
+// 	printf("func 42: %d  \n", ft_memcmp(potato, beans, 4));
+// 	printf("func original: %d  \n", memcmp(potato, beans, 4));
+// 	return (0);
+// }
