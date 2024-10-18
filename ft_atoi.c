@@ -6,14 +6,14 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 13:10:46 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:30:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	verify_non_printable(char *str)
+static char	*verify_non_printable(char *str)
 {
 	int	i;
 
@@ -21,10 +21,10 @@ static int	verify_non_printable(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] < 32 || str[i] > 126)
-			return (1);
+			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (&str[i]);
 }
 
 static int	verify_sign(char *str)
@@ -80,7 +80,7 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char potato[] = "	4";
+	char	potato[] = "-4";
 
 	printf("func beans: %d\n", ft_atoi(potato));
 	printf("func original: %d  \n", atoi(potato));
