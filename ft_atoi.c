@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 23:37:22 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/17 23:38:39 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_atoi(const char *str)
 
 	if (verify_non_printable((char *)str))
 		return (0);
-	if (!verify_digit((char *)str))
+	else if (!verify_digit((char *)str))
 		return (0);
 
 	result = 0;
