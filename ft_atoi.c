@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 20:48:43 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/17 23:37:22 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static int	verify_non_printable(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (str[i] == '\0')
-			return (i);
+		if (str[i] < 32 || str[i] > 126)
+			return (1);
 		i++;
 	}
-	return (i);
+	return (0);
 }
 
 static int	verify_sign(char *str)
@@ -32,10 +32,12 @@ static int	verify_sign(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (str[i] < 0)
-			return ('-');
+		if (str[i] == '-')
+			return (-1);
+		else if (str[i] == '+')
+			return (1);
 		i++;
 	}
 	return (1);
@@ -46,32 +48,46 @@ static int	verify_digit(char *str)
 	int i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (str[i]  < 48 && str[i] > 57)
+		if (!(str[i] >= '0' && str[i] <= '9'))
 			return (0);
 		i++;
 	}
-	return (*str);
+	return (1);
 }
+
 int	ft_atoi(const char *str)
 {
-
 	int	result;
 	int	sign;
 	int	i;
 
-	verify_non_printable(str);
-	verify_sign(str);
-	verify_digit(str);
+	sign = verify_sign((char *)str);
+
+	if (verify_non_printable((char *)str))
+		return (0);
+	if (!verify_digit((char *)str))
+		return (0);
+
+	result = 0;
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 
 int	main(void)
 {
 	char potato[] = "46";
 
-	ft_atoi(potato);
+	printf("func beans: %d\n", ft_atoi(potato));
+	printf("func original: %d  \n", atoi(potato));
 	return (0);
+}
 
 	/*
 		char	potato[] = "46";
@@ -79,4 +95,3 @@ int	main(void)
 		printf("func 42: %d \n", ft_atoi(potato));
 		printf("func original: %d  \n", atoi(potato));
 		return (0);*/
-}
