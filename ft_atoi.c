@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 23:38:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/18 13:10:46 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	verify_sign(char *str)
 
 static int	verify_digit(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -64,12 +64,10 @@ int	ft_atoi(const char *str)
 	int	i;
 
 	sign = verify_sign((char *)str);
-
 	if (verify_non_printable((char *)str))
 		return (0);
 	else if (!verify_digit((char *)str))
 		return (0);
-
 	result = 0;
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -82,16 +80,9 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char potato[] = "46";
+	char potato[] = "	4";
 
 	printf("func beans: %d\n", ft_atoi(potato));
 	printf("func original: %d  \n", atoi(potato));
 	return (0);
 }
-
-	/*
-		char	potato[] = "46";
-
-		printf("func 42: %d \n", ft_atoi(potato));
-		printf("func original: %d  \n", atoi(potato));
-		return (0);*/

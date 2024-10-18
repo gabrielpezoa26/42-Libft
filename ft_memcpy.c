@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:41:26 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 10:34:09 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/18 10:44:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	y = (unsigned char *)dest;
 	u = (unsigned char *)src;
-
 	while (i < n)
 	{
 		y[i] = u[i];
