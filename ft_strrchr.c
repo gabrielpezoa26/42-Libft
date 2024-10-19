@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/16 17:11:05 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/18 11:27:10 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,9 @@ int	ft_strlen(const char *str)
 char	*ft_strrchr(const char *str, int search_str)
 {
 	int	i;
-	int	size;
 
-	size = ft_strlen(str);
-
-	i = ft_strlen(str);	
-	while (str[i] != size - 1)
+	i = ft_strlen(str);
+	while (str[i] >= 0)
 	{
 		if (str[i] == search_str)
 			return ((char *)&str[i]);
@@ -42,11 +39,11 @@ char	*ft_strrchr(const char *str, int search_str)
 	return (NULL);
 }
 
-int	main()
-{
-	char	potato[] = "ddddgabcdef";
-	int		letter = '\0';
+// int	main()
+// {
+// 	char	potato[] = {'d', 'd', 'd', 'd', 'g', 'a' ,'b',12, 'd', 'e' , 11};
+// 	int		letter = 'a';
 
-	printf("batata: %s", ft_strrchr(potato, letter));
-	printf("\nfunc original: %s ", strrchr(potato, letter));
-}
+// 	printf("batata: %s", ft_strrchr(potato, letter));
+// 	printf("\nfunc original: %s ", strrchr(potato, letter));
+//}
