@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:40:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 14:50:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:31:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(char *dest, char *src, size_t n)
 {
-	int	i;
+	size_t	i;
 	int	j;
 
 	i = 0;

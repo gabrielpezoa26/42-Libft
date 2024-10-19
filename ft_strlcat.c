@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:57:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 10:45:09 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:26:25 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strlcat(char *dest, char *src, size_t size)
 {
 	int		i;
-	int		j;
+	size_t	j;
 
 	i = 0;
 	while (dest[i] != '\0')
