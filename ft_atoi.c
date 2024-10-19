@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:14 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 23:38:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/17 23:41:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,3 @@ int	main(void)
 	printf("func original: %d  \n", atoi(potato));
 	return (0);
 }
-
-	/*
-		char	potato[] = "46";
-
-		printf("func 42: %d \n", ft_atoi(potato));
-		printf("func original: %d  \n", atoi(potato));
-		return (0);*/
