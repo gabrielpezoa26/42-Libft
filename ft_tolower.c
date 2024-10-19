@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:58:21 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 10:41:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 18:00:31 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
 
-char	ft_tolower(char c)
+char	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

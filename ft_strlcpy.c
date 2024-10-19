@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:00:16 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 11:17:11 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 17:59:25 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strlcpy(char *dest, char *src, int n)
+char	*ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	int	i;
 

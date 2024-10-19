@@ -6,13 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:12:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 16:11:14 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 17:58:06 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z'))
 		|| ((c >= '0') && (c <= '9')))

@@ -6,13 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 16:14:11 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 17:56:56 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
 	{

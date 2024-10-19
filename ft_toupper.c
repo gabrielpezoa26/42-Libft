@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:48:08 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/15 11:16:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 18:00:13 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	ft_toupper(char c)
+char	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
