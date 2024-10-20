@@ -6,11 +6,12 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 17:56:56 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 19:17:49 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int	ft_isalpha(int c)
 {
@@ -20,9 +21,9 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-/*
+
 int	main(void)
 {
-	printf("%d", ft_isalpha('h'));
+	printf("%d", isalpha('h'));
 	return 0;
-}*/
+}

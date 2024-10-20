@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:10:07 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 17:57:48 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 19:24:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-/*
+
 int	main(void)
 {
-	printf("%d", ft_isdigit('j'));
+	printf("%d \n", ft_isdigit('9'));
 	return 0;
-}*/
+}

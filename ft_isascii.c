@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:25:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 16:16:15 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 19:21:42 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
-/*
+
 int	main(void)
 {
-	//printf("%d", ft_isascii('ç'));
-	printf("%d", isascii('ñ'));
+	printf("%d \n", ft_isascii('h'));
 	return 0;
-}*/
+}

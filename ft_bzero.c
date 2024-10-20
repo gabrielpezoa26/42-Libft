@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:21:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/16 15:03:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:12:11 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_bzero(void *s, size_t len)
 	}
 }
 
-// int	main()
-// {
-// 	char	potato[] = "aaaaaaaaaa";
-// 	ft_bzero(potato, 5);
-// 	printf("%s \n", potato);
-// }
+int	main()
+{
+	char	potato[] = "aaaaaaaaaa";
+	ft_bzero(potato, 5);
+	printf("%s \n", potato);
+}

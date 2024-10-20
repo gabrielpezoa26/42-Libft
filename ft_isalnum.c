@@ -6,11 +6,12 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:12:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 17:58:06 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/19 19:15:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int	ft_isalnum(int c)
 {
@@ -21,9 +22,9 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-/*
+
 int	main(void)
 {
-	printf("%d", ft_isalnum('d'));
+	printf("%d\n", ft_isalnum('d'));
 	return 0;
-}*/
+}

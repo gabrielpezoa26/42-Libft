@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 11:24:56 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 20:50:11 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strchr(const char *str, int search_str)
 {
 	int	i;
 
-	i = 0;
+	 i = ft_strlen(str);
 	while (str[i] != '\0')
 	{
-		if (str[i] == search_str)
+		if (str[i] == (unsigned char)search_str)
 			return ((char *)&str[i]);
 		i++;
 	}

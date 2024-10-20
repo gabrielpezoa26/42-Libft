@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:39:21 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 10:44:46 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:44:42 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (str[count] != '\0')
@@ -24,8 +25,9 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-// int	main()
-// {
-// 	char potato[] = "aaaaaaaaaaa";
-// 	printf("%d", ft_strlen(potato));
-// }
+int	main()
+{
+	char potato[] = "fh";
+	printf("func original: %ld\n", strlen(potato));
+	printf("potato: %ld\n", ft_strlen(potato));
+}
