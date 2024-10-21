@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:00:16 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:34:38 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 17:02:35 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	src_len;
 
+	src_len = 0;
+	while (src[src_len != '\0'])
+	{
+		src_len++;
+	}
 	i = 0;
 	while (i < dstsize - 1 && src[i] != '\0')
 	{
@@ -32,17 +38,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	{
 		i++;
 	}
-	return (i);
+	return (src_len);
 }
 
 // int	main()
 // {
-// 	char	potato[] = "batata";
+// 	char	potato[] = "";
 // 	char 	caneta[] = "";
 
-// 	ft_strlcpy(caneta, potato, 3);
+// 	ft_strlcpy(caneta, "lorem ipsum dolor sit amet", 10);
 // 	printf("%s  \n", caneta);
-// 	//printf("Length of caneta: %zu\n", strlen(caneta));  // teste
-
 // 	return (0);
 // }

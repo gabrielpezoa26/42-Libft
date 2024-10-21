@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:10:32 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:45:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	ft_atoi(const char *nptr)
 	diego = 0;
 	teclado = 1;
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	{
 		i++;
+	}
 	if (nptr[i] == '-')
 	{
 		teclado = (-1);

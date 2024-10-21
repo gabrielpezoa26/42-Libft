@@ -6,50 +6,25 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:59:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:11:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:56:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_strlen(char *s1)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	count;
+	size_t	i;
 
-	count = 0;
-	while (count != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-void	*ft_memmove(void *dest, const void *src, size_t num)
-{
-	unsigned int	i;
-	unsigned int	size_dest;
-	unsigned int	size_src;
-	unsigned char	*d;
-	unsigned char	*k;
-
-	d = (unsigned char *)dest;
-	k = (unsigned char *)src;
-	size_dest = ft_strlen(dest);
-	size_src = ft_strlen(src);
 	i = 0;
-	if (size_dest > size_src)
-		return (1);
-	else if (size_src < size_dest)
+	while (((char *)src)[i] != '\0' && i < len)
 	{
-		while (i < num)
-		{
-			d[i] = k[i];
-			i++;
-		}
+		((char *)dst)[i] = ((char *)src)[i];
+		i++;
 	}
-	return (dest);
+	if (i <= len)
+		((char *)dst)[i] = '\0';
+	return (dst);
 }
 
 // int	main()
