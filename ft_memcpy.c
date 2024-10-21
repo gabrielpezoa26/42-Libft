@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:41:26 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 10:44:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:11:22 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

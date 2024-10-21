@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:31:33 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 12:00:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:12:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

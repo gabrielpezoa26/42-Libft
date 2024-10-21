@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 11:58:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:10:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

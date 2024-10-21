@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:35:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/17 17:01:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:11:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void	*ptr, int value, size_t num)
 {

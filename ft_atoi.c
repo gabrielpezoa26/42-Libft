@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 11:57:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:10:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

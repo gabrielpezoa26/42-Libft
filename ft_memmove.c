@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:59:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 11:26:07 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:11:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *s1)
 {

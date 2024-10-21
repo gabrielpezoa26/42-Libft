@@ -6,12 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:43:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/18 10:44:06 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:11:18 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
