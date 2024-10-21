@@ -6,12 +6,10 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 12:03:44 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 16:31:10 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/21 17:47:20 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
@@ -21,6 +19,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	i = 0;
 	y = (unsigned char *)str;
+	c = (unsigned char)c;
 	while (i < n)
 	{
 		if (y[i] == c)
