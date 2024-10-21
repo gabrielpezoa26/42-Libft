@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:39:21 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 19:44:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/21 11:59:05 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ size_t	ft_strlen(const char *str)
 	return (count);
 }
 
-int	main()
-{
-	char potato[] = "fh";
-	printf("func original: %ld\n", strlen(potato));
-	printf("potato: %ld\n", ft_strlen(potato));
-}
+// int	main()
+// {
+// 	char potato[] = "fh";
+// 	printf("func original: %ld\n", strlen(potato));
+// 	printf("potato: %ld\n", ft_strlen(potato));
+// }

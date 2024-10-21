@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:37:13 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/19 19:30:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/21 11:58:42 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	printf("%d\n", ft_isprint('h'));
-	return 0;
-}
+// int	main(void)
+// {
+// 	printf("%d\n", ft_isprint('h'));
+// 	return 0;
+// }
