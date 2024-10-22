@@ -6,36 +6,33 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:57:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:35:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:39:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	size_t	j;
+	size_t	size_dest;
+	size_t	size_src;
+	size_t	qto_cabe;
 
-	i = 0;
-	while (dst[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (src[j] != '\0' && j < dstsize)
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	return (i + j);
+	size_dest = ft_strlen(dst);
+	size_src = ft_strlen(src);
+	qto_cabe = (size_dest + size_src) + 1;
+	if (qto_cabe > dstsize)
+		return (dstsize);
+	ft_memcpy(dst, src, dstsize);
+	qto_cabe = '\0';
+	return (size_dest + size_src);
 }
 
-// int	main()
-// {
-// 	char	potato[] = "aaaaa";
-// 	char	beans[] = "aaaaac";
-// 	printf("%d", ft_strlcat(potato, beans, 3));
-// 	return (0);
-// }
+int	main()
+{
+	char	potato[] = "aaaaa";
+	char	beanss[] = "aaaac";
+	printf("%zu\n", ft_strlcat(potato, beanss, 10));
+	return (0);
+}

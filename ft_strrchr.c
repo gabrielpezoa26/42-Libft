@@ -6,25 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:39:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:04:12 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	int	count;
-
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
 
 char	*ft_strrchr(const char *str, int search_str)
 {
