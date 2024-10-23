@@ -6,35 +6,41 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:59:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 16:56:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:19:40 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
 {
-	size_t	i;
+	unsigned char	*u;
+	unsigned char	*y;
+	unsigned int	i;
 
+	y = (unsigned char *)dest_str;
+	u = (unsigned char *)src_str;
+	if (((dest_str == NULL) && (src_str == NULL)) || (numBytes == 0))
+		return (NULL);
 	i = 0;
-	while (((char *)src)[i] != '\0' && i < len)
+	while (i < numBytes)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		y[i] = u[i];
 		i++;
 	}
-	if (i <= len)
-		((char *)dst)[i] = '\0';
-	return (dst);
+	return (dest_str);
 }
 
 // int	main()
 // {
-// 	char	potato[4] = "aaaa";
-// 	char	caneta[3] = "kkkk";
-
-// 	ft_memmove(caneta, potato, 4);
+// 	char	potato[10] = NULL;
+// 	char	caneta[10] = NULL;
+// 	size_t	numBytes = 2;
+// 	ft_memmove(caneta, potato, numBytes);
 // 	printf("func 42: %s   \n", caneta);
 
-// 	memmove(caneta, potato, 4);
-// 	printf("func. original %s\n", caneta);
+// 	// memmove(caneta, potato, 4);
+// 	// printf("func. original %s\n", caneta);
 // }

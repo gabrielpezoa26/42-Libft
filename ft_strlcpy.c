@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:00:16 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 17:02:35 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:39:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,25 @@
 #include <string.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	src_len;
 
-	src_len = 0;
-	while (src[src_len != '\0'])
-	{
-		src_len++;
-	}
+	if (size == 0)
+		return (ft_strlen(src));
 	i = 0;
-	while (i < dstsize - 1 && src[i] != '\0')
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize > 0)
-	{
-		dst[i] = '\0';
-	}
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (src_len);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 
 // int	main()
 // {
-// 	char	potato[] = "";
+// 	char	potato[] = "aaa";
 // 	char 	caneta[] = "";
 
 // 	ft_strlcpy(caneta, "lorem ipsum dolor sit amet", 10);
