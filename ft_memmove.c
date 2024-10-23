@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:59:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/23 14:19:40 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:41:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
 
 	y = (unsigned char *)dest_str;
 	u = (unsigned char *)src_str;
-	if (((dest_str == NULL) && (src_str == NULL)) || (numBytes == 0))
-		return (NULL);
 	i = 0;
 	while (i < numBytes)
 	{
