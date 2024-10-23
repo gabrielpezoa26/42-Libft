@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:57:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/23 11:33:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/23 16:02:03 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 // int	main()
 // {
-// 	char	potato[] = "aaaaa";
+// 	char	potato[] = "";
 // 	char	beanss[] = "aaaac";
 // 	printf("%zu\n", ft_strlcat(potato, beanss, 10));
 // 	return (0);

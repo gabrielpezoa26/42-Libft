@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:59:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/23 14:41:59 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/23 16:35:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
 	y = (unsigned char *)dest_str;
 	u = (unsigned char *)src_str;
 	i = 0;
+	if ((y == NULL) && (u == NULL))
+		return (NULL);
+	if ((y >= u) && (y < u + numBytes))
+	{
+		while (numBytes > 0)
+		{
+			y[numBytes - 1] = u[numBytes - 1];
+			numBytes--;
+		}
+	}
 	while (i < numBytes)
 	{
 		y[i] = u[i];
@@ -33,8 +43,8 @@ void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
 
 // int	main()
 // {
-// 	char	potato[10] = NULL;
-// 	char	caneta[10] = NULL;
+// 	char	potato[] = "AAaa";
+// 	char	caneta[] = "kkKK";
 // 	size_t	numBytes = 2;
 // 	ft_memmove(caneta, potato, numBytes);
 // 	printf("func 42: %s   \n", caneta);
