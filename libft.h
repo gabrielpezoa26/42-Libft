@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/24 21:40:45 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/25 15:46:48 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void	*ft_calloc(size_t nitems, size_t size);
 char	*ft_strdup(char *src);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
