@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 16:42:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/27 16:59:39 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,17 @@ char	*ft_itoa(int n)
 	int		index;
 
 	beans = (char *)malloc((ft_calculate_lennn(n) + 1) * sizeof(char));
+	if (beans == NULL)
+		return (NULL);
+	else if (n == 2147483647)
+		return ("2147483648");
+	else if (n == -2147483648)
+		return ("-2147483648");
 	if (n < 0)
-		n = -1;
+	{
+		n = -n;
+		beans[0] = '-';
+	}
 	index = ft_calculate_lennn(n) - 1;
 	while (index >= 0)
 	{
@@ -48,14 +57,14 @@ char	*ft_itoa(int n)
 		n /= 10;
 		index--;
 	}
-	// beans[ft_calculate_lennn] = '\0';
+	beans[ft_calculate_lennn(n)] = '\0';
 	return (beans);
 }
 
-int	main()
-{
-	int potato = 68392;
+//  int	main()
+// {
+// 	int potato = 68392;
 
-	printf("%s \n", ft_itoa(potato));
-	return (0);
-}
+// 	printf("%s \n", ft_itoa(potato));
+// 	return (0);
+// }
