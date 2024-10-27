@@ -6,12 +6,12 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 18:04:47 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/27 18:10:00 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static size_t	ft_calculate_lennn(int mango_loko)
 {
@@ -27,44 +27,50 @@ static size_t	ft_calculate_lennn(int mango_loko)
 	}
 	while (mango_loko > 0)
 	{
-		mango_loko = mango_loko / 10;
+		mango_loko /= 10;
 		size++;
 	}
 	return (size);
 }
 
-char	*ft_itoa(int n)
+static void	ft_convert_to_str(char *str, unsigned int num, size_t len)
 {
-	char	*beans;
-	int		index;
+	size_t	index;
 
-	beans = (char *)malloc((ft_calculate_lennn(n) + 1) * sizeof(char));
-	if (beans == NULL)
-		return (NULL);
-	else if (n == 2147483647)
-		return ("2147483648");
-	else if (n == -2147483648)
-		return ("-2147483648");
-	if (n < 0)
+	index = len - 1;
+	while (num > 0)
 	{
-		n = -n;
-		beans[0] = '-';
-	}
-	index = ft_calculate_lennn(n) - 1;
-	while (index >= 0)
-	{
-		beans[index] = (n % 10) + '0';
-		n /= 10;
+		str[index] = (num % 10) + '0';
+		num /= 10;
 		index--;
 	}
-	beans[ft_calculate_lennn(n)] = '\0';
-	return (beans);
 }
 
- int	main()
+char	*ft_itoa(int n)
 {
-	int potato = 68392;
+	char			*beans;
+	size_t			len;
+	unsigned int	num;
 
-	printf("%s \n", ft_itoa(potato));
-	return (0);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	len = ft_calculate_lennn(n);
+	beans = (char *)malloc((len + 1) * sizeof(char));
+	if (!beans)
+		return (NULL);
+	beans[len] = '\0';
+	if (n == 0)
+	{
+		beans[0] = '0';
+		return (beans);
+	}
+	if (n < 0)
+	{
+		beans[0] = '-';
+		num = -n;
+	}
+	else
+		num = n;
+	ft_convert_to_str(beans, num, len);
+	return (beans);
 }
