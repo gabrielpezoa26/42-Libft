@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 15:45:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/26 22:37:29 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,29 @@
 int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	diego;
-	int	teclado;
+	int	result;
+	int	sign;
 
 	i = 0;
-	diego = 0;
-	teclado = 1;
+	result = 0;
+	sign = 1;
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 	{
 		i++;
 	}
 	if (nptr[i] == '-')
 	{
-		teclado = (-1);
+		sign = (-1);
 		i++;
 	}
 	else if (nptr[i] == '+')
 		i++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		diego = diego * 10 + (nptr[i] - '0');
+		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (diego * teclado);
+	return (result * sign);
 }
 
 // int	main()
