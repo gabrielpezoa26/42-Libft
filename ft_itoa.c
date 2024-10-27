@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 16:59:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/27 18:04:47 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ char	*ft_itoa(int n)
 	return (beans);
 }
 
-//  int	main()
-// {
-// 	int potato = 68392;
+ int	main()
+{
+	int potato = 68392;
 
-// 	printf("%s \n", ft_itoa(potato));
-// 	return (0);
-// }
+	printf("%s \n", ft_itoa(potato));
+	return (0);
+}
