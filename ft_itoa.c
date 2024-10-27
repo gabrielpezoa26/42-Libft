@@ -1,50 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 13:49:58 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/27 14:33:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
-#include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	ft_itoa(int n)
 {
-	int	i;
-	int	result;
-	int	sign;
+	char	result;
 
-	i = 0;
-	result = 0;
-	sign = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-	{
-		i++;
-	}
-	if (nptr[i] == '-')
-	{
-		sign = (-1);
-		i++;
-	}
-	else if (nptr[i] == '+')
-		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = result * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	result = n + '0';
+	return (result);
 }
 
-// int	main()
-// {
-// 	char	potato[] = "+327687";
-// 	printf("func original: %d \n", atoi(potato));
-// 	printf("func paiaaaaa: %d", ft_atoi(potato));
-// }
+int	main()
+{
+	int potato = 69;
+
+	printf("%c \n", ft_itoa(potato));
+}
