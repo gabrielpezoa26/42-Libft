@@ -6,19 +6,19 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 15:27:18 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/28 20:38:13 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*beans;
 	size_t	potato;
 
-	potato = nitems * size;
+	potato = nmemb * size;
 	beans = malloc(potato);
 	if (beans == NULL)
 		return (NULL);

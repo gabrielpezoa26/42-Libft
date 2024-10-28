@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:11:49 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/22 12:04:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:31:19 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int search_str)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(str);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (str[i] == (unsigned char)search_str)
-			return ((char *)&str[i]);
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (NULL);

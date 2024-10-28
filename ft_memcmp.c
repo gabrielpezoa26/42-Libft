@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:43:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/26 12:27:59 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:34:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
 	unsigned char	*y;
 	unsigned char	*u;
 
-	u = (unsigned char *)str2;
-	y = (unsigned char *)str1;
+	u = (unsigned char *)s2;
+	y = (unsigned char *)s1;
 	i = 0;
 	while (i < n)
 	{
