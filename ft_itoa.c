@@ -6,14 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 18:10:00 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/27 21:05:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static size_t	ft_calculate_lennn(int mango_loko)
+static size_t	ft_calculate_len(int mango_loko)
 {
 	size_t	size;
 
@@ -33,14 +32,14 @@ static size_t	ft_calculate_lennn(int mango_loko)
 	return (size);
 }
 
-static void	ft_convert_to_str(char *str, unsigned int num, size_t len)
+static void	ft_convert_to_str(char *string, unsigned int num, size_t len)
 {
 	size_t	index;
 
 	index = len - 1;
 	while (num > 0)
 	{
-		str[index] = (num % 10) + '0';
+		string[index] = (num % 10) + '0';
 		num /= 10;
 		index--;
 	}
@@ -48,29 +47,29 @@ static void	ft_convert_to_str(char *str, unsigned int num, size_t len)
 
 char	*ft_itoa(int n)
 {
-	char			*beans;
 	size_t			len;
 	unsigned int	num;
+	char			*potato;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	len = ft_calculate_lennn(n);
-	beans = (char *)malloc((len + 1) * sizeof(char));
-	if (!beans)
+	len = ft_calculate_len(n);
+	potato = (char *)malloc((len + 1) * sizeof(char));
+	if (potato == 0)
 		return (NULL);
-	beans[len] = '\0';
+	potato[len] = '\0';
 	if (n == 0)
 	{
-		beans[0] = '0';
-		return (beans);
+		potato[0] = '0';
+		return (potato);
 	}
 	if (n < 0)
 	{
-		beans[0] = '-';
+		potato[0] = '-';
 		num = -n;
 	}
 	else
 		num = n;
-	ft_convert_to_str(beans, num, len);
-	return (beans);
+	ft_convert_to_str(potato, num, len);
+	return (potato);
 }
