@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/27 21:05:24 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/28 11:49:18 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,27 +49,27 @@ char	*ft_itoa(int n)
 {
 	size_t			len;
 	unsigned int	num;
-	char			*potato;
+	char			*result;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	len = ft_calculate_len(n);
-	potato = (char *)malloc((len + 1) * sizeof(char));
-	if (potato == 0)
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (result == 0)
 		return (NULL);
-	potato[len] = '\0';
+	result[len] = '\0';
 	if (n == 0)
 	{
-		potato[0] = '0';
-		return (potato);
+		result[0] = '0';
+		return (result);
 	}
 	if (n < 0)
 	{
-		potato[0] = '-';
+		result[0] = '-';
 		num = -n;
 	}
 	else
 		num = n;
-	ft_convert_to_str(potato, num, len);
-	return (potato);
+	ft_convert_to_str(result, num, len);
+	return (result);
 }
