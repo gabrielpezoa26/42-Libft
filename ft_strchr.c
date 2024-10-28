@@ -6,13 +6,13 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/24 13:42:58 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:28:51 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
-#include "libft.h"
 
 char	*ft_strchr(const char *str, int search_str)
 {
