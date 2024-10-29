@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/29 10:49:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:05:21 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_word_count(char const *s, char c)
 
 	count = 0;
 	in_word = 0;
-	while (*s)
+	while (s != NULL && *s != '\0')
 	{
 		if (*s != c && in_word == 0)
 		{
@@ -78,7 +78,7 @@ static int	ft_fill_split(char **split, char const *s, char c)
 		while (s[i] == c)
 			i++;
 		start = i;
-		while (s[i] && s[i] != c)
+		while (s[i] != '\0' && s[i] != c)
 			i++;
 		if (i > start)
 		{
