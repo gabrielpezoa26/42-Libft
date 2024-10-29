@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iteri.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:50:11 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 10:41:56 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/28 23:19:54 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	int		index;
+#include "libft.h"
 
-	index = 0;
-	while (s[index] != '\0')
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char			*new_str;
+	unsigned int	i;
+
+	if (!s || !f)
+		return (NULL);
+	new_str = (char *)malloc((sizeof(char) * (ft_strlen(s) + 1)));
+	if (!new_str)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		f(index, &s[index]);
-		index++;
+		new_str[i] = f(i, s[i]);
+		i++;
 	}
+	new_str[i] = '\0';
+	return (new_str);
 }
