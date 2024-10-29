@@ -6,13 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:37:29 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/28 20:58:45 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	char	*dest;
