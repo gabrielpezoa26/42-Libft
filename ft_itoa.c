@@ -6,27 +6,27 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 11:49:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:32:35 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_calculate_len(int mango_loko)
+static size_t	ft_calculate_len(int value)
 {
 	size_t	size;
 
 	size = 0;
-	if (mango_loko == 0)
+	if (value == 0)
 		return (1);
-	else if (mango_loko < 0)
+	else if (value < 0)
 	{
-		mango_loko *= -1;
+		value *= -1;
 		size++;
 	}
-	while (mango_loko > 0)
+	while (value > 0)
 	{
-		mango_loko /= 10;
+		value /= 10;
 		size++;
 	}
 	return (size);

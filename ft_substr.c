@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/29 14:04:31 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:34:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*potato;
+	char	*result;
 	size_t	s_len;
 
 	if (s == NULL)
@@ -24,9 +24,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (s_len - start < len)
 		len = s_len - start;
-	potato = malloc(sizeof(char) * (len + 1));
-	if (potato == NULL)
+	result = malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
 		return (NULL);
-	ft_strlcpy(potato, s + start, len + 1);
-	return (potato);
+	ft_strlcpy(result, s + start, len + 1);
+	return (result);
 }
