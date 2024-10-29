@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:36:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 13:59:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -41,10 +39,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-// int	main()
-// {
-// 	char	potato[] = "+327687";
-// 	printf("func original: %d \n", atoi(potato));
-// 	printf("func paiaaaaa: %d", ft_atoi(potato));
-// }

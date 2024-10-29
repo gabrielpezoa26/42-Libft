@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:21:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:23:14 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 13:59:35 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -27,10 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-// int	main()
-// {
-// 	char	potato[] = "aaaaaaaaaa";
-// 	ft_bzero(potato, 5);
-// 	printf("%s \n", potato);
-// }

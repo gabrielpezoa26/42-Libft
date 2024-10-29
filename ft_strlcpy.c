@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:00:16 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:28:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 14:04:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -29,13 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-// int	main()
-// {
-// 	char	potato[] = "aaa";
-// 	char 	caneta[] = "";
-
-// 	ft_strlcpy(caneta, "lorem ipsum dolor sit amet", 10);
-// 	printf("%s  \n", caneta);
-// 	return (0);
-// }

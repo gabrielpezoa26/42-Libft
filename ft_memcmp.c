@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:43:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:34:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 14:00:43 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -31,13 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main()
-// {
-// 	char	potato[] = "aaaaaz";
-// 	char	beans[] =  "aaaaab";
-// 	size_t	n = 6;	
-// 	printf("func 42: %d  \n", ft_memcmp(potato, beans, n));
-// 	printf("func original: %d  \n", memcmp(potato, beans, n));
-// 	return (0);
-// }

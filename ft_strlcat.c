@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:57:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:28:57 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 14:04:12 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -39,11 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[index] = '\0';
 	return (size_dest + size_src);
 }
-
-// int	main()
-// {
-// 	char	potato[] = "";
-// 	char	beanss[] = "aaaac";
-// 	printf("%zu\n", ft_strlcat(potato, beanss, 10));
-// 	return (0);
-// }

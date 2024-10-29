@@ -6,12 +6,10 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:31:33 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/21 14:12:30 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:04:24 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -29,12 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }
-
-// int main(void)
-// {
-//     char potato[] = "aaaaz";
-//     char beanss[] = "aaaaa";
-//     printf("potato: %d", ft_strncmp(potato, beanss, 5));
-// 	printf("\n func original: %d \n", strncmp(potato, beanss, 5));
-//     return 0;
-// }

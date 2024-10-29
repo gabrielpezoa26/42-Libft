@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:35:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:22:55 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 14:01:02 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memset(void	*s, int c, size_t n)
@@ -28,10 +26,3 @@ void	*ft_memset(void	*s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int	main()
-{
-	char	potato[] = "fsfsf dfssdsfg";
-	ft_memset(potato, '\0', 5);
-	printf("%s", potato);
-}*/

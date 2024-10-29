@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 20:38:13 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 13:59:40 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -25,10 +24,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(beans, 0, potato);
 	return (beans);
 }
-
-/*int main() 
-{
-    int *ptr = (int *)ft_calloc(5, sizeof(int));
-    free(ptr);
-    return 0;
-}*/

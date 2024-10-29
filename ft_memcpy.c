@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:41:26 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/24 13:53:24 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:00:48 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int	main()
-{
-	char	apple[] = "aaaaaaaa";
-	char	potato[] = "fsfsf dfssdsfg";
-
-	ft_memcpy(apple, potato, 5);
-	memcpy(apple, potato, 5);
-	printf("pacoca:  %s \n", apple);
-}*/
