@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/28 23:43:30 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/29 10:49:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	**ft_split(char const *s, char c)
 	split = (char **)malloc((words + 1) * sizeof(char *));
 	if (split == NULL)
 		return (NULL);
-	if (ft_fill_split(split, s, c) == NULL)
+	if (!ft_fill_split(split, s, c))
 		return (NULL);
 	return (split);
 }
