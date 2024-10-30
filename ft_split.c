@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/29 14:26:11 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/29 23:20:50 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_countwords(char const *s, char delimeter)
 {
@@ -73,4 +74,57 @@ char	**ft_split(char const *s, char c)
 	result[ft_countwords(s, c)] = NULL;
 	ft_fillwords(result, s, c);
 	return (result);
+}
+
+int main(void)
+{
+    char **split_result;
+    size_t i;
+
+    // Example input strings and delimiters
+    char *inputs[] = {
+        "Hello,World,This,Is,A,Test",
+        ",,,Leading,Delimiters",
+        "Trailing,Delimiters,,,",
+        "Consecutive,,Delimiters,,",
+        "",
+        NULL
+    };
+    char delimiters[] = {',', ',', ',', ',', ',', ','};
+    size_t num_tests = sizeof(inputs) / sizeof(inputs[0]);
+
+    for (size_t test = 0; test < num_tests; test++)
+    {
+        if (inputs[test] == NULL)
+            continue;
+
+        printf("Test %zu: \"%s\"\n", test + 1, inputs[test]);
+        split_result = ft_split(inputs[test], delimiters[test]);
+
+        if (!split_result)
+        {
+            printf("ft_split returned NULL\n\n");
+            continue;
+        }
+
+        printf("Split Results:\n");
+        i = 0;
+        while (split_result[i] != NULL)
+        {
+            printf("  split_result[%zu]: \"%s\"\n", i, split_result[i]);
+            i++;
+        }
+
+        // Free the allocated memory
+        i = 0;
+        while (split_result[i] != NULL)
+        {
+            free(split_result[i]);
+            i++;
+        }
+        free(split_result);
+        printf("\n");
+    }
+
+    return (0);
 }
