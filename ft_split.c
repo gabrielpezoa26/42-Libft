@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/30 21:33:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/31 00:13:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,59 +18,71 @@ static size_t	ft_countwords(char const *s, char delimeter)
 	int		word;
 
 	num = 0;
+	word = 0;
 	while (*s)
 	{
-		word = 0;
-		while (*s == delimeter && *s)
-			++s;
-		while (*s != delimeter && *s)
+		if (*s != delimeter && !word)
 		{
-			if (!word)
-			{
-				++num;
-				word = 1;
-			}
-			++s;
+			word = 1;
+			num++;
 		}
+		else if (*s == delimeter)
+			word = 0;
+		s++;
 	}
 	return (num);
 }
 
-static void	ft_fillwords(char **string, char const *s, char delimeter)
+static void	*ft_free_memory(char **array, int free_position)
+{
+	while (free_position >= 0)
+	{
+		free(array[free_position]);
+		free_position--;
+	}
+	free(array);
+	return (NULL);
+}
+
+static int	ft_fillwords(char **result, char const *s, char c)
 {
 	size_t	len;
-	int		i;
+	int		word_index;
 
-	i = 0;
+	word_index = 0;
 	while (*s)
 	{
 		len = 0;
-		while (*s == delimeter && *s)
-			++s;
-		while (*s != delimeter && *s)
+		while (*s == c && *s)
+			s++;
+		while (*s != c && *s)
 		{
-			++len;
-			++s;
+			len++;
+			s++;
 		}
 		if (len)
 		{
-			string[i] = malloc(len + 1);
-			ft_strlcpy(string[i], s - len, len + 1);
+			result[word_index] = malloc(len + 1);
+			if (!result[word_index])
+				return (ft_free_memory(result, word_index), 1);
+			ft_strlcpy(result[word_index], s - len, len + 1);
+			word_index++;
 		}
-		++i;
 	}
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
+	size_t	word_count;
 
 	if (!s)
 		return (NULL);
-	result = malloc((ft_countwords(s, c) + 1) * sizeof(char *));
-	if (!result)
+	word_count = ft_countwords(s, c);
+	result = malloc((word_count + 1) * sizeof(char *));
+	if (!result || ft_fillwords(result, s, c))
 		return (NULL);
-	result[ft_countwords(s, c)] = NULL;
-	ft_fillwords(result, s, c);
+	result[word_count] = NULL;
 	return (result);
 }
