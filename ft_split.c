@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:51:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/31 00:13:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/10/31 10:58:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_countwords(char const *s, char delimeter)
 	word = 0;
 	while (*s)
 	{
-		if (*s != delimeter && !word)
+		if (*s != delimeter && word == 0)
 		{
 			word = 1;
 			num++;
@@ -77,11 +77,11 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	word_count;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	word_count = ft_countwords(s, c);
 	result = malloc((word_count + 1) * sizeof(char *));
-	if (!result || ft_fillwords(result, s, c))
+	if (result == NULL || ft_fillwords(result, s, c))
 		return (NULL);
 	result[word_count] = NULL;
 	return (result);
