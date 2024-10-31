@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:46:09 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/29 13:30:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/30 08:20:24 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s != '\0')
-		ft_putchar_fd(*s++, fd);
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
