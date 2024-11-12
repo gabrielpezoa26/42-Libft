@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:12:51 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/31 20:13:46 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:53:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,5 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
+
+//verifica se o parâmetro é alfanumérico
