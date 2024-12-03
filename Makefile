@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
+#    By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:32:25 by gcesar-n          #+#    #+#              #
-#    Updated: 2024/10/31 20:15:02 by gabriel          ###   ########.fr        #
+#    Updated: 2024/12/03 15:52:32 by gcesar-n         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,9 @@ SRC_FILES:= ft_isalpha.c \
 						ft_striteri.c \
 						ft_strtrim.c \
 						ft_split.c
+
+BONUS_SRCS = \
+			ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 OBJ_FILES := $(SRC_FILES:.c=.o)
 

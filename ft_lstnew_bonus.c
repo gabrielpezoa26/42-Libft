@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 14:17:05 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/03 14:17:07 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/12/03 14:19:41 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/12/03 17:17:25 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*mango_loko;
 
-	if (size == 0)
-		return (ft_strlen(src));
-	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	mango_loko = malloc(sizeof(t_list));
+	if (mango_loko == NULL)
 	{
-		dst[i] = src[i];
-		i++;
+		return (NULL);
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	mango_loko->content = content;
+	mango_loko->next = NULL;
+	return (mango_loko);
 }
