@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/09 13:16:18 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/07 16:20:01 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/01/09 13:18:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_putunbr(unsigned int n)
 {
-	int	i;
+	long	num;
+	int		count;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+	num = (long)n;
+	count = 0;
+	if (num > 9)
+		count += ft_putunbr(num / 10);
+	count += ft_putchar(num % 10 + '0');
+	return (count);
 }

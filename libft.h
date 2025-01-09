@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/04 13:45:41 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/09 13:13:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -55,10 +60,31 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
+//bonus
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_last(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+
+//getnextline
+
+size_t	ft_strlength(const char *s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*get_next_line(int fd);
+
+//ft_printf
+
+int		ft_printf(const char *format, ...);
+int		ft_putstr(char *s);
+int		ft_putchar(char c);
+int		ft_putnbr(int n);
+int		ft_putunbr(unsigned int n);
+int		ft_putptr(void *y);
+int		ft_print_hex_upper(unsigned long n);
+int		ft_print_hex_lower(unsigned long n);
+char	*ft_strchr(const char *s, int c);
 #endif

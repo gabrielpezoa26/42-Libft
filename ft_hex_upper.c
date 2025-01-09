@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_hex_upper.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:54:29 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/09 13:16:18 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/11/08 17:32:07 by gabriel           #+#    #+#             */
+/*   Updated: 2025/01/09 13:16:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_print_hex_upper(unsigned long n)
 {
-	int	i;
+	char	*hex_digits_upper;
+	int		char_count;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+	char_count = 0;
+	hex_digits_upper = "0123456789ABCDEF";
+	if (n >= 16)
+		char_count += ft_print_hex_upper(n / 16);
+	char_count += ft_putchar(hex_digits_upper[n % 16]);
+	return (char_count);
 }
