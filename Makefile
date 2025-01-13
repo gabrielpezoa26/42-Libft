@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+         #
+#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:32:25 by gcesar-n          #+#    #+#              #
-#    Updated: 2025/01/09 13:18:18 by gcesar-n         ###   ########.fr        #
+#    Updated: 2025/01/12 21:10:45 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,7 @@ BONUS_OBJ = $(BONUS_SRCS:.c=.o)
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
-
+CFLAGS = -Wall -Wextra -Werror -fPIC
 ifeq ($(findstring bonus, $(MAKECMDGOALS)), bonus)
 	OBJ += $(BONUS_OBJ)
 endif
