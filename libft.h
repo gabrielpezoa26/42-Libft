@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/09 19:26:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/16 17:10:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 
-//bonus
+/*-------LIBFT_BONUS------*/
 typedef struct s_list
 {
 	void			*content;
@@ -65,10 +65,11 @@ typedef struct s_list
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
-t_list	*ft_last(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
-//getnextline
+/*--------GET_NEXT_LINE-------*/
 size_t	ft_strlength(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
@@ -76,7 +77,7 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*get_next_line(int fd);
 
-//ft_printf
+/*--------FT_PRINTF-----------*/
 int		ft_printf(const char *format, ...);
 int		ft_putstr(char *s);
 int		ft_putchar(char c);

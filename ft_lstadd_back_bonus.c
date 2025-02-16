@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 13:44:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/22 00:41:12 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/16 17:04:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	potato = ft_last(*lst);
+	potato = ft_lstlast(*lst);
 	potato->next = new;
 }
