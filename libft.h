@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:01:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/03/23 20:42:21 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:33:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char	*ft_strchr(const char *s, int c);
 /*
 
   the main goal of this project was to write our very own library. some of 
-them are implementations of already existing default C functions, others like
+them are implementations of already existing C functions, others like
 "ft_strjoin" are customized to the 42 School needs. it was a bit of a challenge to implement some, 
 especially the functions that handle memory, and, at the time, functions that needed auxiliary functions
 were a bit hard to implement.
